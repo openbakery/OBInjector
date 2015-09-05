@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>--project-name</key>
-	<string>OBImagePicker</string>
+	<string>OBInjector</string>
 	<key>--project-company</key>
 	<string>openbakery.org</string>
 	<key>--project-version</key>
-	<string>0.1</string>
+	<string>1.0</string>
 	<key>--company-id</key>
 	<string>org.openbakery</string>
 	<key>--docset-feed-url</key>
-	<string>http://openbakery.org/OBImagePicker/%DOCSETATOMFILENAME</string>
+	<string>http://openbakery.org/OBInjector/%DOCSETATOMFILENAME</string>
 	<key>--docset-package-url</key>
-	<string>http://openbakery.org/OBImagePicker/%DOCSETPACKAGEFILENAME</string>
+	<string>http://openbakery.org/OBInjector/%DOCSETPACKAGEFILENAME</string>
 	<key>--docset-fallback-url</key>
-	<string>http://openbakery.org/OBImagePicker/</string>
+	<string>http://openbakery.org/OBInjector/</string>
 	<key>--create-docset</key>
 	<true/>
 	<key>--publish-docset</key>
