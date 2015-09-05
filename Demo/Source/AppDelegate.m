@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import "OBInjector.h"
-#import "NSObject+OBInjector.h"
+#import "MyService.h"
 
 @interface AppDelegate ()
 
@@ -21,12 +21,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self configureInjector];
 
-	[self.injector injectDependenciesTo:self.window.rootViewController];
+	UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+	[self.injector injectDependenciesTo:navigationController.topViewController];
 	return YES;
 }
 
 - (void)configureInjector {
 	_injector = [[OBInjector alloc] init];
+
+
+	MyService *myService = [[MyService alloc] init];
+	[_injector registerProperty:@"myService" withInstance:myService];
+
+	[_injector registerProperty:@"currentDate" withBlock:^{
+			return [NSDate date];
+	}];
+
+	NSDateFormatter  *dateFormatter = [[NSDateFormatter alloc] init];
+	dateFormatter.dateStyle = NSDateFormatterNoStyle;
+	dateFormatter.timeStyle = NSDateFormatterMediumStyle;
+	[_injector registerProperty:@"dateFormatter" withInstance:dateFormatter];
+
+
 }
 
 - (OBInjector *)injector {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C97E7653345636236FEED56 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E848AB5005C6DA4D5E3724 /* libPods-Tests.a */; };
+		355B2156F97B6DB54AF4CE9A /* MyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B27903FFB5C516487D807 /* MyService.m */; };
 		355B219EADAB0BDAEC4EE56C /* OBInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBInjector.m */; };
 		355B2313FF62F7BC17D7C277 /* NSObject+OBInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2649B0342B74A83E0F29 /* NSObject+OBInjector.m */; };
 		355B2A9AD668EC5593D47334 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355B25DF4395F7B9A228116C /* Images.xcassets */; };
@@ -40,11 +41,13 @@
 		355B25DF4395F7B9A228116C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		355B2649B0342B74A83E0F29 /* NSObject+OBInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OBInjector.m"; sourceTree = "<group>"; };
 		355B270A4182B2F9699807B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		355B27903FFB5C516487D807 /* MyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyService.m; sourceTree = "<group>"; };
 		355B28B938FED11426B99427 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		355B28FF45C00763A82B3EAB /* OBInjectTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjectTestObject.h; sourceTree = "<group>"; };
 		355B29B26E4504C3A405B6A6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		355B2A553A76387C4E40A88B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		355B2AFA1245E477DE942590 /* OBInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjector.m; sourceTree = "<group>"; };
+		355B2B1137D7E9A0511D443E /* MyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyService.h; sourceTree = "<group>"; };
 		355B2C3557666E045BC7A0AA /* OBInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjector.h; sourceTree = "<group>"; };
 		49DB12DDD4E11544F6F65B4C /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A77A65CF1B9B36B2004FA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				355B270A4182B2F9699807B6 /* ViewController.h */,
 				355B21BE093C2999128E6E52 /* AppDelegate.h */,
 				355B25B373CCF61137F1EA27 /* main.m */,
+				355B27903FFB5C516487D807 /* MyService.m */,
+				355B2B1137D7E9A0511D443E /* MyService.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				355B2DAAEE99146CC0EA081F /* ViewController.m in Sources */,
 				355B2D9E4757B813E5C46ABC /* AppDelegate.m in Sources */,
 				355B2CFD83860C25F53B0065 /* main.m in Sources */,
+				355B2156F97B6DB54AF4CE9A /* MyService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
