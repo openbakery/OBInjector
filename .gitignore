@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+.gradle
+OBInjector.xcodeproj/xcuserdata/
+OBInjector.xcworkspace/
+Pods
+Podfile.lock
+build
+OBInjector.xcodeproj/project.xcworkspace/
