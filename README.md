@@ -43,7 +43,7 @@ Now add the OBInjector instance to your AppDelegate.
 	_injector = [[OBInjector alloc] init];
 
 	
-	// retister add the instances that can be injected
+	// register add the instances that can be injected
 
 	MyService *myService = [[MyService alloc] init];
 	[_injector registerProperty:@"myService" withInstance:myService];
