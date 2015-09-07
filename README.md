@@ -55,7 +55,7 @@ Now add the OBInjector instance to your AppDelegate.
 
 ### Use the injector
 
-The injector is now ready and we want to inject the MyService instance into our ViewController. For this we need to specfiy the property in the ViewController class:
+The injector is now ready and we want to inject the MyService instance into our ViewController. For this we need to specify the property in the ViewController class:
 
 
 ```
@@ -64,15 +64,15 @@ The injector is now ready and we want to inject the MyService instance into our 
 
 If this property is in the public header or in a private category does't matter.
 
-The last set is to tell the injector that it should inject the dependencies to the ViewController. The pattern for this is that, always the creater of in instance is responsible for triggering the injector.
-In this case the ViewController is the root view controller, therefor the AppDelegate is responsible for this, so we add the following code to the `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {` method:
+The last thing is to tell the injector that it should inject the dependencies to the ViewController. The pattern for this is that always the creater of an instance is responsible for triggering the injector.
+In this case the ViewController is the root view controller, therefor the AppDelegate is responsible for tiggering the injection, so we add the following code to the `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {` method:
 
 ```	
 [self.injector injectDependenciesTo:self.window.rootViewController];	
 ```
 
 
-If the ViewController now creates a new ViewController, or a push segue was defined in the storyboard, the ViewController is now responsible to trigger the injection to the new view controller.
+If the ViewController now creates another view controller, or there is a segue in the storyboard that displays a child view controller, the ViewController is now responsible to trigger the injection to the new view controller.
 
 To make this simple there is a category on NSObject that helps here:
 
@@ -84,11 +84,6 @@ To make this simple there is a category on NSObject that helps here:
 
 To make this work you need to change your AppDelegate to implement the `OBInjectorApplicationDelegate` protocol and the property `@property (nonatomic, readonly) OBInjector *injector;`
 
-```
-@interface AppDelegate : UIResponder <OBInjectorApplicationDelegate>
-...
-@end
-```
 
 ```
 @interface AppDelegate : UIResponder <OBInjectorApplicationDelegate>
@@ -105,10 +100,8 @@ To make this work you need to change your AppDelegate to implement the `OBInject
 
 ### How it works
 
-When the injector is triggered to inject properties to a given class that, all properties of the given class are checked if it matches a registerd propererty. 
-Matches mean that the property name must be equal to the registerd property name, and also the class of the property must match.
-
-e.g. 
+When the injector is triggered to inject properties to a given class, all properties of the given class are checked if it matches a registered property. 
+Matches mean that the property name must be equal to the registered property name, and also the class of the property must match.
 
 The injector is configured like this:
 
@@ -118,7 +111,6 @@ MyService *myService = [[MyService alloc] init];
 ```
 
 Now you need to have a class with a property with the name 'myService' of the type 'MyService' so that the instance can be injected:
-
 
 
 [_injector injectDependenciesTo:myInstance]
@@ -133,9 +125,42 @@ This does not work:
 ```
 
 
+The class type of the injected property must not be exactly the same class. It can be a subclass:
+
+```
+MyExtendedService *myService = [[MyExtendedService alloc] init]; // is subclass of MyService
+[_injector registerProperty:@"myService" withInstance:MyExtendedService]; 
+```
+
+
+Also a protocol can be registered for injection:
+
+```
+@protocol FooService <NSObject>
+...
+@end
+```
+```
+@interface FooServiceImpl : NSObject <FooService>
+...
+@end
+```
+
+```
+FooServiceImpl *fooService = [[FooServiceImpl alloc] init];
+[_injector registerProperty:@"fooService" withInstance:fooService]; 
+```
+
+
+If you now specify following property the FooServiceImpl gets injected:
+
+```
+@protocol (nonatomic, strong) NSObject<FooService> fooService;
+```
+
+
 __Note:__ Only properties are set when they are nil!
 
-e.g.
 
 ```
 viewController.myService = [[MySpecialService alloc] init];
@@ -143,10 +168,12 @@ viewController.myService = [[MySpecialService alloc] init];
 ```
 Here the propery myServices is not changed!!!
 
-### When do I know that the properties where injected.
+
+### How do I know that the properties was injected.
 
 If your class implements the protocol `OBInjectorDelegate` and the method `- (void)didInjectDependencies;` then this method is called if the injection is finished, but only if something was injected.
 
+You can use this to finish the initialization for you instance when you need the injected dependencies for this.
 
 ### I want to inject always a new instance
 
