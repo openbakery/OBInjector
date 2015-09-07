@@ -119,11 +119,13 @@ Now you need to have a class with a property with the name 'myService' of the ty
 @property(nonatomic, strong) MyService *myService;
 ```
 
-This does not work:
+This does __NOT__ work:
 ```
 @property(nonatomic, strong) MyService *service;
 ```
 
+
+#### Subclasses
 
 The class type of the injected property must not be exactly the same class. It can be a subclass:
 
@@ -132,6 +134,8 @@ MyExtendedService *myService = [[MyExtendedService alloc] init]; // is subclass 
 [_injector registerProperty:@"myService" withInstance:MyExtendedService]; 
 ```
 
+
+#### Protocol
 
 Also a protocol can be registered for injection:
 
@@ -159,13 +163,14 @@ If you now specify following property the FooServiceImpl gets injected:
 ```
 
 
-__Note:__ Only properties are set when they are nil!
+### Only properties are injected when they are nil
 
 
 ```
 viewController.myService = [[MySpecialService alloc] init];
 [_injector injectDependenciesTo:viewController];
 ```
+
 Here the propery myServices is not changed!!!
 
 
