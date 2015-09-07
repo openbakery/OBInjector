@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'OBInjector'
-  spec.version      = '1.0.0'
+  spec.version      = '1.0.1'
   spec.summary      = "A small and simple objective-c dependency injection framework"
   spec.homepage     = "https://github.com/openbakery/OBInjector"
   spec.author       = { "René Pirringer" => "rene@openbakery.org" }
