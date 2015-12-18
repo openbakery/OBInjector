@@ -26,6 +26,11 @@
 	return sharedController;
 }
 
++ (void)injectDependenciesTo:(NSObject *)injectTo {
+	[[OBInjectorController sharedController].injector injectDependenciesTo:injectTo];
+}
+
+
 - (instancetype)init {
 	self = [super init];
 	if (self) {
@@ -38,6 +43,7 @@
 - (OBInjector *)injector {
 	return _injector;
 }
+
 
 
 @end

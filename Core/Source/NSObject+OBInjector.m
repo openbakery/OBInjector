@@ -14,8 +14,7 @@
 
 
 - (void)injectDependenciesTo:(NSObject *)injectTo {
-	OBInjectorController *controller = [OBInjectorController sharedController];
-	[controller.injector injectDependenciesTo:injectTo];
+	[OBInjectorController injectDependenciesTo:injectTo];
 }
 
 
