@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/openbakery/OBInjector.svg?branch=master)](https://travis-ci.org/openbakery/OBInjector)
+
 # OBInjector
 
 The OBInjector is a very small and simple dependency injector for Objective-C that does property injection.
