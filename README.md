@@ -15,10 +15,11 @@ Add the following line to you Podspec:
 
 
 ```
-pod 'OBInjector', '~> 1.0.1'
+pod 'OBInjector', '~> 1.1.0'
 ```
 
 Use the following import in your code:
+
 
 ```
 #import <OBInjector/OBInjector.h>
@@ -30,7 +31,6 @@ Now add the OBInjector instance to your AppDelegate.
 
 ```
 @implementation AppDelegate {
-	OBInjector *_injector;
 }
 
 
@@ -40,13 +40,12 @@ Now add the OBInjector instance to your AppDelegate.
 }
 
 - (void)configureInjector {
-	_injector = [[OBInjector alloc] init];
-
+	OBInjector *injector = [OBInjectorController sharedController].injector;
 	
 	// register add the instances that can be injected
 
 	MyService *myService = [[MyService alloc] init];
-	[_injector registerProperty:@"myService" withInstance:myService];
+	[injector registerProperty:@"myService" withInstance:myService];
 
   ...
 
@@ -82,21 +81,6 @@ To make this simple there is a category on NSObject that helps here:
 }
 ```
 
-To make this work you need to change your AppDelegate to implement the `OBInjectorApplicationDelegate` protocol and the property `@property (nonatomic, readonly) OBInjector *injector;`
-
-
-```
-@interface AppDelegate : UIResponder <OBInjectorApplicationDelegate>
-...
-@end
-```
-
-```
-- (OBInjector *)injector {
-	return _injector;
-}
-```
-
 
 ### How it works
 
@@ -107,13 +91,13 @@ The injector is configured like this:
 
 ```
 MyService *myService = [[MyService alloc] init];
-[_injector registerProperty:@"myService" withInstance:myService];
+[injector registerProperty:@"myService" withInstance:myService];
 ```
 
 Now you need to have a class with a property with the name 'myService' of the type 'MyService' so that the instance can be injected:
 
 
-[_injector injectDependenciesTo:myInstance]
+[injector injectDependenciesTo:myInstance]
 
 ```
 @property(nonatomic, strong) MyService *myService;
@@ -131,7 +115,7 @@ The class type of the injected property must not be exactly the same class. It c
 
 ```
 MyExtendedService *myService = [[MyExtendedService alloc] init]; // is subclass of MyService
-[_injector registerProperty:@"myService" withInstance:MyExtendedService]; 
+[injector registerProperty:@"myService" withInstance:MyExtendedService]; 
 ```
 
 
@@ -152,7 +136,7 @@ Also a protocol can be registered for injection:
 
 ```
 FooServiceImpl *fooService = [[FooServiceImpl alloc] init];
-[_injector registerProperty:@"fooService" withInstance:fooService]; 
+[injector registerProperty:@"fooService" withInstance:fooService]; 
 ```
 
 
@@ -168,7 +152,7 @@ If you now specify following property the FooServiceImpl gets injected:
 
 ```
 viewController.myService = [[MySpecialService alloc] init];
-[_injector injectDependenciesTo:viewController];
+[injector injectDependenciesTo:viewController];
 ```
 
 Here the propery myServices is not changed!!!
@@ -186,7 +170,7 @@ You can use this to finish the initialization for you instance when you need the
 For this you can register a property that calls a block that can create the instance:
 
 ```
-[_injector registerProperty:@"currentDate" withBlock:^{
+[injector registerProperty:@"currentDate" withBlock:^{
 	return [NSDate date];
 }];
 ```

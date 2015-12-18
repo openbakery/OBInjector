@@ -7,7 +7,6 @@
 #import <Foundation/Foundation.h>
 
 #import "NSObject+OBInjector.h"
-#import "OBInjectorApplicationDelegate.h"
 
 
 typedef id<NSObject> (^OBInjectorCreateInstanceBlock)(void);

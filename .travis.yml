@@ -1,0 +1,11 @@
+language: objective-c
+
+sudo: false
+
+osx_image: xcode7.1
+
+env:
+  - TERM=dumb
+
+script:
+    - ./gradlew test

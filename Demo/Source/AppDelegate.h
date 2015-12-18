@@ -6,9 +6,8 @@
 
 
 #import <UIKit/UIKit.h>
-#import "OBInjectorApplicationDelegate.h"
 
-@interface AppDelegate : UIResponder <OBInjectorApplicationDelegate>
+@interface AppDelegate : UIResponder
 
 @property(strong, nonatomic) UIWindow *window;
 

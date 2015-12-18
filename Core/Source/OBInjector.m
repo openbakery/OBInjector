@@ -75,8 +75,13 @@
 	NSMutableArray *_registeredProperties;
 }
 
-
 - (id)init {
+	@throw [NSException exceptionWithName:NSInternalInconsistencyException
+	                                   reason:@"Use the OBInjectorController for getting a OBInjector instance!!!"
+	                                 userInfo:nil];
+}
+
+- (id)initPrivate {
 	self = [super init];
 	if (self) {
 		_registeredProperties = [[NSMutableArray alloc] init];

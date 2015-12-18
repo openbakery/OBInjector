@@ -10,6 +10,7 @@
 
 #import "OBInjector.h"
 #import "OBInjectTestObject.h"
+#import "OBInjectorController.h"
 
 #import <XCTest/XCTest.h>
 
@@ -19,6 +20,9 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
+@interface OBInjector(Private)
+- (instancetype)initPrivate;
+@end
 
 @interface OBInjectorTest : XCTestCase
 
@@ -32,10 +36,8 @@
 
 - (void)setUp {
 	[super setUp];
-
-	injector = [[OBInjector alloc] init];
+	injector = [[OBInjector alloc] initPrivate];
 	testObject = [[OBInjectTestObject alloc] init];
-
 }
 
 
