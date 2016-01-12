@@ -87,4 +87,21 @@
 	assertThatBool(testObject.didInject, is(@NO));
 }
 
+- (void)testRegisterTwice {
+	[injector registerProperty:@"injectTest" withInstance:@"testString"];
+	[injector registerProperty:@"injectTest" withInstance:@"secondString"];
+	[injector injectDependenciesTo:testObject];
+	assertThat(testObject.injectTest, is(equalTo(@"testString")));
+}
+
+
+- (void)testRegisterAndReset {
+	[injector registerProperty:@"injectTest" withInstance:@"testString"];
+	[injector reset];
+	[injector registerProperty:@"injectTest" withInstance:@"secondString"];
+	[injector injectDependenciesTo:testObject];
+	assertThat(testObject.injectTest, is(equalTo(@"secondString")));
+}
+
+
 @end

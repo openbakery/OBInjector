@@ -67,4 +67,5 @@ typedef id<NSObject> (^OBInjectorCreateInstanceBlock)(void);
  */
 - (id)instanceForClass:(Class)clazz;
 
+- (void)reset;
 @end

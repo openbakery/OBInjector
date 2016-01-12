@@ -84,11 +84,14 @@
 - (id)initPrivate {
 	self = [super init];
 	if (self) {
-		_registeredProperties = [[NSMutableArray alloc] init];
+		[self reset];
 	}
 	return self;
 }
 
+- (void)reset {
+	_registeredProperties = [[NSMutableArray alloc] init];
+}
 
 
 - (BOOL)injectPropertyTo:(NSObject *)injectTo registredProperty:(OBRegisteredProperty *)registeredProperty {
