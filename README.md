@@ -17,7 +17,7 @@ Add the following line to you Podspec:
 
 
 ```
-pod 'OBInjector', '~> 1.1.0'
+pod 'OBInjector', '~> 1.2.0'
 ```
 
 Use the following import in your code:
@@ -42,13 +42,7 @@ Now add the OBInjector instance to your AppDelegate.
 }
 
 - (void)configureInjector {
-	OBInjector *injector = [OBInjectorController sharedController].injector;
-	
-	// register add the instances that can be injected
-
-	MyService *myService = [[MyService alloc] init];
-	[injector registerProperty:@"myService" withInstance:myService];
-
+	OBPropg
   ...
 
 }

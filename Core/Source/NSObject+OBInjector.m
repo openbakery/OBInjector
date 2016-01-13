@@ -7,7 +7,7 @@
 
 #import "NSObject+OBInjector.h"
 #import "OBInjectorController.h"
-#import "OBInjector.h"
+#import "OBPropertyInjector.h"
 
 
 @implementation NSObject (OBInjector)

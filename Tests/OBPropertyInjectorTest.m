@@ -8,7 +8,7 @@
 //
 
 
-#import "OBInjector.h"
+#import "OBPropertyInjector.h"
 #import "OBInjectTestObject.h"
 #import "OBInjectorController.h"
 
@@ -20,23 +20,23 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
-@interface OBInjector(Private)
+@interface OBPropertyInjector (Private)
 - (instancetype)initPrivate;
 @end
 
-@interface OBInjectorTest : XCTestCase
+@interface OBPropertyInjectorTest : XCTestCase
 
 @end
 
-@implementation OBInjectorTest
+@implementation OBPropertyInjectorTest
 {
-	OBInjector *injector;
+	OBPropertyInjector *injector;
 	OBInjectTestObject *testObject;
 }
 
 - (void)setUp {
 	[super setUp];
-	injector = [[OBInjector alloc] initPrivate];
+	injector = [[OBPropertyInjector alloc] init];
 	testObject = [[OBInjectTestObject alloc] init];
 }
 
@@ -95,13 +95,6 @@
 }
 
 
-- (void)testRegisterAndReset {
-	[injector registerProperty:@"injectTest" withInstance:@"testString"];
-	[injector reset];
-	[injector registerProperty:@"injectTest" withInstance:@"secondString"];
-	[injector injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(equalTo(@"secondString")));
-}
 
 
 @end

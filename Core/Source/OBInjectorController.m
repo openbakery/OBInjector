@@ -5,15 +5,11 @@
 //
 
 #import "OBInjectorController.h"
-#import "OBInjector.h"
-
-@interface OBInjector(Private)
-- (instancetype)initPrivate;
-@end
+#import "OBPropertyInjector.h"
 
 
 @implementation OBInjectorController {
-	OBInjector *_injector;
+	OBPropertyInjector *_injector;
 }
 
 
@@ -34,13 +30,13 @@
 - (instancetype)init {
 	self = [super init];
 	if (self) {
-		_injector = [[OBInjector alloc] initPrivate];
+		_injector = [[OBPropertyInjector alloc] init];
 	}
 	return self;
 }
 
 
-- (OBInjector *)injector {
+- (OBPropertyInjector *)injector {
 	return _injector;
 }
 

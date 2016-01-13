@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class OBInjector;
+@class OBPropertyInjector;
 
 /**
  * The OBInjectorController is the central class to create and get access to the injector
@@ -35,6 +35,6 @@
  *
  * @returns an injector instance
  */
-@property(nonatomic, readonly) OBInjector *injector;
+@property(nonatomic, readonly) OBPropertyInjector *injector;
 
 @end

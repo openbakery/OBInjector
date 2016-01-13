@@ -6,7 +6,7 @@
 
 
 #import "AppDelegate.h"
-#import "OBInjector.h"
+#import "OBPropertyInjector.h"
 #import "MyService.h"
 #import "OBInjectorController.h"
 #import "NSObject+OBInjector.h"
@@ -28,7 +28,7 @@
 }
 
 - (void)configureInjector {
-	OBInjector *injector = [OBInjectorController sharedController].injector;
+	OBPropertyInjector *injector = [OBInjectorController sharedController].injector;
 
 	MyService *myService = [[MyService alloc] init];
 	[injector registerProperty:@"myService" withInstance:myService];

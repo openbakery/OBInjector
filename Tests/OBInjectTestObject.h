@@ -9,7 +9,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "OBInjector.h"
+#import "OBPropertyInjector.h"
 
 
 @interface OBInjectTestObject : NSObject  <OBInjectorDelegate>

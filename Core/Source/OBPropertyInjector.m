@@ -7,7 +7,7 @@
 
 
 #import <objc/runtime.h>
-#import "OBInjector.h"
+#import "OBPropertyInjector.h"
 
 @interface OBRegisteredProperty : NSObject
 
@@ -70,27 +70,18 @@
 @end
 
 
-@implementation OBInjector
+@implementation OBPropertyInjector
 {
 	NSMutableArray *_registeredProperties;
 }
 
-- (id)init {
-	@throw [NSException exceptionWithName:NSInternalInconsistencyException
-	                                   reason:@"Use the OBInjectorController for getting a OBInjector instance!!!"
-	                                 userInfo:nil];
-}
 
-- (id)initPrivate {
+- (id)init {
 	self = [super init];
 	if (self) {
-		[self reset];
+		_registeredProperties = [[NSMutableArray alloc] init];
 	}
 	return self;
-}
-
-- (void)reset {
-	_registeredProperties = [[NSMutableArray alloc] init];
 }
 
 
