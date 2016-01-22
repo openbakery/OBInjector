@@ -9,7 +9,6 @@
 #import "OBPropertyInjector.h"
 #import "MyService.h"
 #import "OBInjectorController.h"
-#import "NSObject+OBInjector.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +22,7 @@
 	[self configureInjector];
 
 	UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-	[self injectDependenciesTo:navigationController.topViewController];
+	[OBInjectorController injectDependenciesTo:navigationController.topViewController];
 	return YES;
 }
 

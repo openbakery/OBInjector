@@ -8,6 +8,9 @@
 
 @class OBPropertyInjector;
 
+typedef void (^OBInjectorConfigureInjectorBlock)(OBPropertyInjector *injector);
+
+
 /**
  * The OBInjectorController is the central class to create and get access to the injector
  */
@@ -22,6 +25,13 @@
 
 
 /**
+ * Use this method to configure the injector
+ * This method is only called once
+ */
++ (void)configureInjector:(OBInjectorConfigureInjectorBlock)block;
+
+
+/**
  * Injects the instances to the registered properties of the given object.
  * Note that only values are injected where the property is nil.
  *
@@ -33,7 +43,7 @@
 /**
  * Property to the injector instance
  *
- * @returns an injector instance
+ * @returns an injector instance, or null if the injector was not configured
  */
 @property(nonatomic, readonly) OBPropertyInjector *injector;
 

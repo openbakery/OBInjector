@@ -6,7 +6,7 @@
 
 #import "ViewController.h"
 #import "MyService.h"
-#import "NSObject+OBInjector.h"
+#import "OBInjectorController.h"
 
 @interface ViewController ()
 @property(nonatomic, strong) MyService *myService;
@@ -28,7 +28,7 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	[self injectDependenciesTo:segue.destinationViewController];
+	[OBInjectorController injectDependenciesTo:segue.destinationViewController];
 }
 
 

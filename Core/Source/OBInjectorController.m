@@ -30,11 +30,24 @@
 - (instancetype)init {
 	self = [super init];
 	if (self) {
-		_injector = [[OBPropertyInjector alloc] init];
 	}
 	return self;
 }
 
+
++ (void)configureInjector:(OBInjectorConfigureInjectorBlock)block {
+	[[OBInjectorController sharedController] configureInjector:block];
+}
+
+
+- (void)configureInjector:(OBInjectorConfigureInjectorBlock)block {
+	if (!_injector) {
+		if (block) {
+			_injector = [[OBPropertyInjector alloc] init];
+			block(_injector);
+		}
+	}
+}
 
 - (OBPropertyInjector *)injector {
 	return _injector;

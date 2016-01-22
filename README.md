@@ -17,7 +17,7 @@ Add the following line to you Podspec:
 
 
 ```
-pod 'OBInjector', '~> 1.2.0'
+pod 'OBInjector', '~> 1.3.0'
 ```
 
 Use the following import in your code:
@@ -32,20 +32,18 @@ Use the following import in your code:
 Now add the OBInjector instance to your AppDelegate.
 
 ```
+
 @implementation AppDelegate {
 }
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	[self configureInjector];
-	...
+	[OBInjectorController configureInjector:^(OBPropertyInjector *injector) {
+		MyService *myService = [[MyService alloc] init];
+		[injector registerProperty:@"myService" withInstance:myService];
+	}];
 }
 
-- (void)configureInjector {
-	OBPropg
-  ...
-
-}
 ```
 
 ### Use the injector
@@ -63,7 +61,7 @@ The last thing is to tell the injector that it should inject the dependencies to
 In this case the ViewController is the root view controller, therefor the AppDelegate is responsible for tiggering the injection, so we add the following code to the `- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {` method:
 
 ```	
-[self.injector injectDependenciesTo:self.window.rootViewController];	
+[OBInjectorController injectDependenciesTo:self.window.rootViewController];	
 ```
 
 
@@ -73,7 +71,7 @@ To make this simple there is a category on NSObject that helps here:
 
 ```
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	[self injectDependenciesTo:segue.destinationViewController];
+	[OBInjectorController injectDependenciesTo:segue.destinationViewController];
 }
 ```
 
@@ -86,14 +84,18 @@ Matches mean that the property name must be equal to the registered property nam
 The injector is configured like this:
 
 ```
-MyService *myService = [[MyService alloc] init];
-[injector registerProperty:@"myService" withInstance:myService];
+[OBInjectorController configureInjector:^(OBPropertyInjector *injector) {
+		MyService *myService = [[MyService alloc] init];
+		[injector registerProperty:@“myService” withInstance:myService];
+	}];
 ```
+
+It is made sure that the configureInjector is only called once.
 
 Now you need to have a class with a property with the name 'myService' of the type 'MyService' so that the instance can be injected:
 
 
-[injector injectDependenciesTo:myInstance]
+[OBInjectorController injectDependenciesTo:myInstance]
 
 ```
 @property(nonatomic, strong) MyService *myService;

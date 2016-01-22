@@ -6,8 +6,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSObject+OBInjector.h"
-
 
 typedef id<NSObject> (^OBInjectorCreateInstanceBlock)(void);
 
@@ -66,5 +64,13 @@ typedef id<NSObject> (^OBInjectorCreateInstanceBlock)(void);
  * @returns an instance for the giving class
  */
 - (id)instanceForClass:(Class)clazz;
+
+/**
+ * Method to get the instance for a given register property
+ * @param propertyName The name of the property where a instance should be returned
+ * @returns an instance for the giving registered property
+ */
+- (id)instanceForProperty:(NSString *)propertyName;
+
 
 @end
