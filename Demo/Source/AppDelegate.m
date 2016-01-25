@@ -27,19 +27,20 @@
 }
 
 - (void)configureInjector {
-	OBPropertyInjector *injector = [OBInjectorController sharedController].injector;
 
-	MyService *myService = [[MyService alloc] init];
-	[injector registerProperty:@"myService" withInstance:myService];
-
-	[injector registerProperty:@"currentDate" withBlock:^{
+	[OBInjectorController configureInjector:^(OBPropertyInjector *injector) {
+		MyService *myService = [[MyService alloc] init];
+		[injector registerProperty:@"myService" withInstance:myService];
+		
+		[injector registerProperty:@"currentDate" withBlock:^{
 			return [NSDate date];
+		}];
+		
+		NSDateFormatter  *dateFormatter = [[NSDateFormatter alloc] init];
+		dateFormatter.dateStyle = NSDateFormatterNoStyle;
+		dateFormatter.timeStyle = NSDateFormatterMediumStyle;
+		[injector registerProperty:@"dateFormatter" withInstance:dateFormatter];
 	}];
-
-	NSDateFormatter  *dateFormatter = [[NSDateFormatter alloc] init];
-	dateFormatter.dateStyle = NSDateFormatterNoStyle;
-	dateFormatter.timeStyle = NSDateFormatterMediumStyle;
-	[injector registerProperty:@"dateFormatter" withInstance:dateFormatter];
 }
 
 
