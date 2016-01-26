@@ -14,6 +14,13 @@
 		355B2CFD83860C25F53B0065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B25B373CCF61137F1EA27 /* main.m */; };
 		355B2D9E4757B813E5C46ABC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2A553A76387C4E40A88B /* AppDelegate.m */; };
 		355B2DAAEE99146CC0EA081F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B29B26E4504C3A405B6A6 /* ViewController.m */; };
+		A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D621C57C4FE009863FE /* AppDelegate.swift */; };
+		A75F7D651C57C4FE009863FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D641C57C4FE009863FE /* ViewController.swift */; };
+		A75F7D6A1C57C4FE009863FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D691C57C4FE009863FE /* Assets.xcassets */; };
+		A75F7D6D1C57C4FE009863FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D6B1C57C4FE009863FE /* LaunchScreen.storyboard */; };
+		A75F7D731C57C8A6009863FE /* libOBInjector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A79CD99F1C56B69A00F8AB25 /* libOBInjector.a */; };
+		A75F7D751C57C8BE009863FE /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D741C57C8BE009863FE /* MyService.swift */; };
+		A75F7D771C57D09E009863FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D661C57C4FE009863FE /* Main.storyboard */; };
 		A77A65C91B9B36A7004FA11A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77A65CB1B9B36A7004FA11A /* LaunchScreen.xib */; };
 		A77A65CC1B9B36AB004FA11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77A65CE1B9B36AB004FA11A /* Main.storyboard */; };
 		A79CD9AA1C56B6AA00F8AB25 /* OBPropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBPropertyInjector.m */; };
@@ -67,6 +74,15 @@
 		355B2C41190344373748B0E4 /* OBInjectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjectorController.h; sourceTree = "<group>"; };
 		355B2D1698713C74862A597D /* OBInjectorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectorControllerTest.m; sourceTree = "<group>"; };
 		49DB12DDD4E11544F6F65B4C /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBInjectorSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75F7D621C57C4FE009863FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A75F7D641C57C4FE009863FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A75F7D671C57C4FE009863FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A75F7D691C57C4FE009863FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A75F7D6C1C57C4FE009863FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A75F7D6E1C57C4FE009863FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75F7D721C57C51C009863FE /* OBInjector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OBInjector-Bridging-Header.h"; sourceTree = "<group>"; };
+		A75F7D741C57C8BE009863FE /* MyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		A77A65CF1B9B36B2004FA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A77A65D01B9B36B2004FA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A79CD99F1C56B69A00F8AB25 /* libOBInjector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOBInjector.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +92,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A75F7D5D1C57C4FE009863FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75F7D731C57C8A6009863FE /* libOBInjector.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A79CD99C1C56B69A00F8AB25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,10 +197,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A75F7D611C57C4FE009863FE /* OBInjectorSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A75F7D621C57C4FE009863FE /* AppDelegate.swift */,
+				A75F7D641C57C4FE009863FE /* ViewController.swift */,
+				A75F7D661C57C4FE009863FE /* Main.storyboard */,
+				A75F7D691C57C4FE009863FE /* Assets.xcassets */,
+				A75F7D6B1C57C4FE009863FE /* LaunchScreen.storyboard */,
+				A75F7D6E1C57C4FE009863FE /* Info.plist */,
+				A75F7D721C57C51C009863FE /* OBInjector-Bridging-Header.h */,
+				A75F7D741C57C8BE009863FE /* MyService.swift */,
+			);
+			path = OBInjectorSwiftDemo;
+			sourceTree = "<group>";
+		};
 		A7B0D4541B9B29020020244B = {
 			isa = PBXGroup;
 			children = (
 				A7B0D48B1B9B2CA80020244B /* Tests */,
+				A75F7D611C57C4FE009863FE /* OBInjectorSwiftDemo */,
 				A7B0D45E1B9B29020020244B /* Products */,
 				355B21AABEFFF32C5AE472DF /* Core */,
 				355B2750D08D5A00D93AD1EF /* Demo */,
@@ -191,6 +231,7 @@
 				A7B0D45D1B9B29020020244B /* OBInjectorDemo.app */,
 				A7B0D48A1B9B2CA80020244B /* Tests.xctest */,
 				A79CD99F1C56B69A00F8AB25 /* libOBInjector.a */,
+				A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +259,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A75F7D5F1C57C4FE009863FE /* OBInjectorSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A75F7D711C57C4FE009863FE /* Build configuration list for PBXNativeTarget "OBInjectorSwiftDemo" */;
+			buildPhases = (
+				A75F7D5C1C57C4FE009863FE /* Sources */,
+				A75F7D5D1C57C4FE009863FE /* Frameworks */,
+				A75F7D5E1C57C4FE009863FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OBInjectorSwiftDemo;
+			productName = OBInjectorSwiftDemo;
+			productReference = A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A79CD99E1C56B69A00F8AB25 /* OBInjector */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A79CD9A51C56B69A00F8AB25 /* Build configuration list for PBXNativeTarget "OBInjector" */;
@@ -278,9 +336,13 @@
 		A7B0D4551B9B29020020244B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Rene Pirringer";
 				TargetAttributes = {
+					A75F7D5F1C57C4FE009863FE = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					A79CD99E1C56B69A00F8AB25 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -309,11 +371,22 @@
 				A7B0D45C1B9B29020020244B /* OBInjectorDemo */,
 				A7B0D4891B9B2CA80020244B /* Tests */,
 				A79CD99E1C56B69A00F8AB25 /* OBInjector */,
+				A75F7D5F1C57C4FE009863FE /* OBInjectorSwiftDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A75F7D5E1C57C4FE009863FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75F7D771C57D09E009863FE /* Main.storyboard in Resources */,
+				A75F7D6D1C57C4FE009863FE /* LaunchScreen.storyboard in Resources */,
+				A75F7D6A1C57C4FE009863FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7B0D45B1B9B29020020244B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +440,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A75F7D5C1C57C4FE009863FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A75F7D751C57C8BE009863FE /* MyService.swift in Sources */,
+				A75F7D651C57C4FE009863FE /* ViewController.swift in Sources */,
+				A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A79CD99B1C56B69A00F8AB25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +491,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A75F7D661C57C4FE009863FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A75F7D671C57C4FE009863FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A75F7D6B1C57C4FE009863FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A75F7D6C1C57C4FE009863FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		A77A65CB1B9B36A7004FA11A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -427,6 +526,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A75F7D6F1C57C4FE009863FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = OBInjectorSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elo.OBInjectorSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OBInjectorSwiftDemo/OBInjector-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A75F7D701C57C4FE009863FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OBInjectorSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elo.OBInjectorSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OBInjectorSwiftDemo/OBInjector-Bridging-Header.h";
+			};
+			name = Release;
+		};
 		A79CD9A61C56B69A00F8AB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,6 +721,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A75F7D711C57C4FE009863FE /* Build configuration list for PBXNativeTarget "OBInjectorSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A75F7D6F1C57C4FE009863FE /* Debug */,
+				A75F7D701C57C4FE009863FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A79CD9A51C56B69A00F8AB25 /* Build configuration list for PBXNativeTarget "OBInjector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -601,6 +736,7 @@
 				A79CD9A71C56B69A00F8AB25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7B0D4581B9B29020020244B /* Build configuration list for PBXProject "OBInjector" */ = {
 			isa = XCConfigurationList;
