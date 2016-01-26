@@ -28,10 +28,8 @@ class ViewController: UIViewController {
 	}
 
 	override func viewWillAppear(animated:Bool) {
-		let launchDate = (dateFormatter.stringFromDate((myService.launchDate)))
-		self.launchDateLabel.text = "\(launchDate)"
-		let currentDate = (dateFormatter.stringFromDate(NSDate()))
-		self.currentDateLabel.text = "\(currentDate)"
+		self.launchDateLabel.text = "\(dateFormatter.stringFromDate((myService.launchDate)))"
+		self.currentDateLabel.text = "\(dateFormatter.stringFromDate(currentDate))"
 	}
 	
 	
