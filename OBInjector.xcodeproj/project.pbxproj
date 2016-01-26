@@ -31,11 +31,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7B0D4901B9B2CA80020244B /* PBXContainerItemProxy */ = {
+		A7B216611C57D9D5004945A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7B0D4551B9B29020020244B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A7B0D45C1B9B29020020244B;
+			remoteInfo = OBInjectorDemo;
+		};
+		A7B216631C57D9DC004945A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7B0D4551B9B29020020244B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79CD99E1C56B69A00F8AB25;
+			remoteInfo = OBInjector;
+		};
+		A7B216651C57D9E3004945A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7B0D4551B9B29020020244B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79CD99E1C56B69A00F8AB25;
 			remoteInfo = OBInjector;
 		};
 /* End PBXContainerItemProxy section */
@@ -270,6 +284,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A7B216661C57D9E3004945A3 /* PBXTargetDependency */,
 			);
 			name = OBInjectorSwiftDemo;
 			productName = OBInjectorSwiftDemo;
@@ -304,6 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A7B216641C57D9DC004945A3 /* PBXTargetDependency */,
 			);
 			name = OBInjectorDemo;
 			productName = OBInjector;
@@ -323,7 +339,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A7B0D4911B9B2CA80020244B /* PBXTargetDependency */,
+				A7B216621C57D9D5004945A3 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
@@ -483,10 +499,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A7B0D4911B9B2CA80020244B /* PBXTargetDependency */ = {
+		A7B216621C57D9D5004945A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A7B0D45C1B9B29020020244B /* OBInjectorDemo */;
-			targetProxy = A7B0D4901B9B2CA80020244B /* PBXContainerItemProxy */;
+			targetProxy = A7B216611C57D9D5004945A3 /* PBXContainerItemProxy */;
+		};
+		A7B216641C57D9DC004945A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79CD99E1C56B69A00F8AB25 /* OBInjector */;
+			targetProxy = A7B216631C57D9DC004945A3 /* PBXContainerItemProxy */;
+		};
+		A7B216661C57D9E3004945A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79CD99E1C56B69A00F8AB25 /* OBInjector */;
+			targetProxy = A7B216651C57D9E3004945A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -685,10 +711,6 @@
 			baseConfigurationReference = 2EC9BDEE85CAF8AF190B48A5 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -697,7 +719,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBInjector.app/OBInjector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBInjectorDemo.app/OBInjectorDemo";
 			};
 			name = Debug;
 		};
@@ -706,15 +728,11 @@
 			baseConfigurationReference = 49DB12DDD4E11544F6F65B4C /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = Tests/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBInjector.app/OBInjector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBInjectorDemo.app/OBInjectorDemo";
 			};
 			name = Release;
 		};
@@ -728,6 +746,7 @@
 				A75F7D701C57C4FE009863FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A79CD9A51C56B69A00F8AB25 /* Build configuration list for PBXNativeTarget "OBInjector" */ = {
 			isa = XCConfigurationList;

@@ -3,8 +3,8 @@ plugins {
 }
 
 xcodebuild {
-	scheme = 'OBInjector'
-  target = 'OBInjector'
+	scheme = 'OBInjectorDemo'
+  target = 'OBInjectorDemo'
 
 	destination = ['iPad 2', 'iPhone 6']
 }
