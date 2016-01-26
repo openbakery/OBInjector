@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-	var myService: MyService?
-	var dateFormatter: NSDateFormatter?
-	var currentDate: NSDate?
+	var myService: MyService!
+	var dateFormatter: NSDateFormatter!
+	var currentDate: NSDate!
 	
 	@IBOutlet var launchDateLabel: UILabel!
 	@IBOutlet var currentDateLabel: UILabel!
@@ -28,9 +28,9 @@ class ViewController: UIViewController {
 	}
 
 	override func viewWillAppear(animated:Bool) {
-		let launchDate = (dateFormatter?.stringFromDate((myService?.launchDate)!))!
+		let launchDate = (dateFormatter.stringFromDate((myService.launchDate)))
 		self.launchDateLabel.text = "\(launchDate)"
-		let currentDate = (dateFormatter?.stringFromDate(NSDate()))!
+		let currentDate = (dateFormatter.stringFromDate(NSDate()))
 		self.currentDateLabel.text = "\(currentDate)"
 	}
 	
