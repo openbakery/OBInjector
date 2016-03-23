@@ -1,0 +1,5 @@
+framework module OBInjector {
+	umbrella header "OBInjector"
+	export *
+	module * { export * }
+}

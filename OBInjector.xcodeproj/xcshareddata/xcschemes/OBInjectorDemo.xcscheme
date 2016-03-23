@@ -38,7 +38,26 @@
                ReferencedContainer = "container:OBInjector.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A7378CFE1CA2DD9C00D30471"
+               BuildableName = "OBInjectorTests.xctest"
+               BlueprintName = "OBInjectorTests"
+               ReferencedContainer = "container:OBInjector.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A7B0D45C1B9B29020020244B"
+            BuildableName = "OBInjectorDemo.app"
+            BlueprintName = "OBInjectorDemo"
+            ReferencedContainer = "container:OBInjector.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
