@@ -167,9 +167,24 @@
 	return nil;
 }
 
-- (id)instanceForProperty:(NSString *)property {
-	return [_registeredProperties valueForKey:property];
+- (OBRegisteredProperty *)propertyForName:(NSString *)propertyName {
+	for (OBRegisteredProperty *registeredProperty in _registeredProperties) {
+		if ([registeredProperty.name isEqualToString:propertyName]) {
+			return registeredProperty;
+		}
+	}
+	return nil;
 }
 
+- (id)instanceForProperty:(NSString *)propertyName {
+	return [self propertyForName:propertyName].instance;
+}
+
+- (void)deleteProperty:(NSString *)propertyName {
+	OBRegisteredProperty *registeredProperty = [self propertyForName:propertyName];
+	if (registeredProperty) {
+		[_registeredProperties removeObject:registeredProperty];
+	}
+}
 
 @end

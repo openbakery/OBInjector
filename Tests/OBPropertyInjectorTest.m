@@ -94,7 +94,23 @@
 	assertThat(testObject.injectTest, is(equalTo(@"testString")));
 }
 
+- (void)testInstanceForProperty {
+	NSString *instance = @"testString";
+	[injector registerProperty:@"injectTest" withInstance:instance];
+
+	NSString *instanceForProperty = [injector instanceForProperty:@"injectTest"];
+	assertThat(instanceForProperty, is(instance));
+}
 
 
+- (void)testDeletePropertyWithName {
+	[injector registerProperty:@"injectTest" withInstance:@"testString"];
+	[injector deleteProperty:@"injectTest"];
+
+
+	NSString *instanceForProperty = [injector instanceForProperty:@"injectTest"];
+	assertThat(instanceForProperty, is(nilValue()));
+
+}
 
 @end

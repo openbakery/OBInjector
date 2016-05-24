@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C97E7653345636236FEED56 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E848AB5005C6DA4D5E3724 /* libPods-Tests.a */; };
 		355B2156F97B6DB54AF4CE9A /* MyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B27903FFB5C516487D807 /* MyService.m */; };
 		355B28EA4CDFAE088BB12284 /* OBInjectorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2D1698713C74862A597D /* OBInjectorControllerTest.m */; };
 		355B2A9AD668EC5593D47334 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355B25DF4395F7B9A228116C /* Images.xcassets */; };
@@ -35,6 +34,7 @@
 		A79CD9AB1C56B6AA00F8AB25 /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
 		A7FA3BE11C2407B00011B23B /* OBInjectTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B21983C853153BE08E48F /* OBInjectTestObject.m */; };
 		A7FA3BE21C2407B00011B23B /* OBPropertyInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B24F27D254AF383ECB1BC /* OBPropertyInjectorTest.m */; };
+		FAF09F7F79186B0DB559967D /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4823AA3E30B98AC708894D53 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2EC9BDEE85CAF8AF190B48A5 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		355B2160F74E9BCD0B9A7536 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		355B21983C853153BE08E48F /* OBInjectTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectTestObject.m; sourceTree = "<group>"; };
 		355B21BE093C2999128E6E52 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		355B2C3557666E045BC7A0AA /* OBPropertyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBPropertyInjector.h; sourceTree = "<group>"; };
 		355B2C41190344373748B0E4 /* OBInjectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjectorController.h; sourceTree = "<group>"; };
 		355B2D1698713C74862A597D /* OBInjectorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectorControllerTest.m; sourceTree = "<group>"; };
-		49DB12DDD4E11544F6F65B4C /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4823AA3E30B98AC708894D53 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7378CF61CA2DD9C00D30471 /* OBInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OBInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7378D141CA2DDCD00D30471 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7378D1B1CA2DE3700D30471 /* OBInjector.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = OBInjector.modulemap; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		A79CD99F1C56B69A00F8AB25 /* libStatic Library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libStatic Library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0D45D1B9B29020020244B /* OBInjectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBInjectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0D48A1B9B2CA80020244B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3E848AB5005C6DA4D5E3724 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,13 +161,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C97E7653345636236FEED56 /* libPods-Tests.a in Frameworks */,
+				FAF09F7F79186B0DB559967D /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FF4D4C72C2AB77D39EC55DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4823AA3E30B98AC708894D53 /* libPods-Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		355B21AABEFFF32C5AE472DF /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,15 +240,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		6BBC5D2F4CBEA61C6ADD0902 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2EC9BDEE85CAF8AF190B48A5 /* Pods-Tests.debug.xcconfig */,
-				49DB12DDD4E11544F6F65B4C /* Pods-Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A75F7D611C57C4FE009863FE /* OBInjectorSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,8 +263,8 @@
 				A7B0D45E1B9B29020020244B /* Products */,
 				355B21AABEFFF32C5AE472DF /* Core */,
 				355B2750D08D5A00D93AD1EF /* Demo */,
-				6BBC5D2F4CBEA61C6ADD0902 /* Pods */,
-				CB79E5E81F117FD9402034AA /* Frameworks */,
+				F52CD380F352B92C21ED7CE4 /* Pods */,
+				0FF4D4C72C2AB77D39EC55DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,12 +292,13 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		CB79E5E81F117FD9402034AA /* Frameworks */ = {
+		F52CD380F352B92C21ED7CE4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E3E848AB5005C6DA4D5E3724 /* libPods-Tests.a */,
+				CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */,
+				0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,11 +393,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7B0D4941B9B2CA80020244B /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				7BE2E2C458AB0260023B4195 /* Check Pods Manifest.lock */,
+				9143C1427FAB614D1305DBC3 /* 📦 Check Pods Manifest.lock */,
 				A7B0D4861B9B2CA80020244B /* Sources */,
 				A7B0D4871B9B2CA80020244B /* Frameworks */,
 				A7B0D4881B9B2CA80020244B /* Resources */,
-				10EDE17F4906B1EDB49D1E64 /* Copy Pods Resources */,
+				085209DF21F52D5B6F5CF4D9 /* 📦 Embed Pods Frameworks */,
+				4B9264F1D9AC3DBC1A9B13BB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -498,14 +499,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10EDE17F4906B1EDB49D1E64 /* Copy Pods Resources */ = {
+		085209DF21F52D5B6F5CF4D9 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B9264F1D9AC3DBC1A9B13BB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,14 +529,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7BE2E2C458AB0260023B4195 /* Check Pods Manifest.lock */ = {
+		9143C1427FAB614D1305DBC3 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,7 +851,7 @@
 		};
 		A7B0D4921B9B2CA80020244B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EC9BDEE85CAF8AF190B48A5 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -852,7 +868,7 @@
 		};
 		A7B0D4931B9B2CA80020244B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49DB12DDD4E11544F6F65B4C /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = 0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = Tests/Resource/Info.plist;
@@ -873,6 +889,7 @@
 				A7378D0F1CA2DD9C00D30471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A75F7D711C57C4FE009863FE /* Build configuration list for PBXNativeTarget "OBInjectorSwiftDemo" */ = {
 			isa = XCConfigurationList;

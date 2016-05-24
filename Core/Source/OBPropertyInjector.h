@@ -73,4 +73,9 @@ typedef id<NSObject> (^OBInjectorCreateInstanceBlock)(void);
 - (id)instanceForProperty:(NSString *)propertyName;
 
 
+/**
+ * Deletes the property with the given name
+ */
+- (void)deleteProperty:(NSString *)propertyName;
+
 @end
