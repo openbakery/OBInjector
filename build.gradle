@@ -1,11 +1,21 @@
-plugins {
-  id "org.openbakery.xcode-plugin" version "0.12.5"
+buildscript {
+	repositories {
+		maven {
+			url('http://repo.openbakery.org/')
+		}
+		mavenCentral()
+  }
+
+	dependencies {
+			classpath "org.openbakery:xcode-plugin:0.14.2.develop.+"
+	}
 }
+apply plugin: "org.openbakery.xcode-plugin"
 
 xcodebuild {
 	scheme = 'OBInjectorDemo'
   target = 'OBInjectorDemo'
 
-	destination = ['iPad 2', 'iPhone 6']
+	destination = ['iPhone 6']
 }
 

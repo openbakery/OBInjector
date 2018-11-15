@@ -22,6 +22,8 @@
 		A7378D191CA2DDEA00D30471 /* OBInjectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C41190344373748B0E4 /* OBInjectorController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7378D1A1CA2DDEA00D30471 /* OBInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B24838A0E93EB51A6FFB5 /* OBInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7378D1C1CA2DE8A00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
+		A74531181D64B76700F6A323 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; };
+		A74531191D64B76700F6A323 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; };
 		A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D621C57C4FE009863FE /* AppDelegate.swift */; };
 		A75F7D651C57C4FE009863FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D641C57C4FE009863FE /* ViewController.swift */; };
 		A75F7D6A1C57C4FE009863FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D691C57C4FE009863FE /* Assets.xcassets */; };
@@ -34,7 +36,6 @@
 		A79CD9AB1C56B6AA00F8AB25 /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
 		A7FA3BE11C2407B00011B23B /* OBInjectTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B21983C853153BE08E48F /* OBInjectTestObject.m */; };
 		A7FA3BE21C2407B00011B23B /* OBPropertyInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B24F27D254AF383ECB1BC /* OBPropertyInjectorTest.m */; };
-		FAF09F7F79186B0DB559967D /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4823AA3E30B98AC708894D53 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		A7378CF61CA2DD9C00D30471 /* OBInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OBInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7378D141CA2DDCD00D30471 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7378D1B1CA2DE3700D30471 /* OBInjector.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = OBInjector.modulemap; sourceTree = "<group>"; };
+		A74531161D64B76700F6A323 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Carthage/Build/iOS/OCHamcrest.framework; sourceTree = "<group>"; };
+		A74531171D64B76700F6A323 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Carthage/Build/iOS/OCMockito.framework; sourceTree = "<group>"; };
 		A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBInjectorSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F7D621C57C4FE009863FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F7D641C57C4FE009863FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +164,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF09F7F79186B0DB559967D /* libPods-Tests.a in Frameworks */,
+				A74531181D64B76700F6A323 /* OCHamcrest.framework in Frameworks */,
+				A74531191D64B76700F6A323 /* OCMockito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +175,8 @@
 		0FF4D4C72C2AB77D39EC55DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A74531161D64B76700F6A323 /* OCHamcrest.framework */,
+				A74531171D64B76700F6A323 /* OCMockito.framework */,
 				4823AA3E30B98AC708894D53 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
@@ -393,12 +399,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7B0D4941B9B2CA80020244B /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				9143C1427FAB614D1305DBC3 /* 📦 Check Pods Manifest.lock */,
 				A7B0D4861B9B2CA80020244B /* Sources */,
 				A7B0D4871B9B2CA80020244B /* Frameworks */,
 				A7B0D4881B9B2CA80020244B /* Resources */,
-				085209DF21F52D5B6F5CF4D9 /* 📦 Embed Pods Frameworks */,
-				4B9264F1D9AC3DBC1A9B13BB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -497,54 +500,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		085209DF21F52D5B6F5CF4D9 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4B9264F1D9AC3DBC1A9B13BB /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9143C1427FAB614D1305DBC3 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7378CF11CA2DD9C00D30471 /* Sources */ = {
@@ -728,7 +683,6 @@
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -738,7 +692,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -851,15 +804,19 @@
 		};
 		A7B0D4921B9B2CA80020244B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Resource/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBInjectorDemo.app/OBInjectorDemo";
@@ -868,11 +825,15 @@
 		};
 		A7B0D4931B9B2CA80020244B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tests/Resource/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBInjectorDemo.app/OBInjectorDemo";
