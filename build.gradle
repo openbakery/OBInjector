@@ -7,14 +7,14 @@ buildscript {
   }
 
 	dependencies {
-			classpath "org.openbakery:xcode-plugin:0.14.2.develop.+"
+			classpath "org.openbakery:xcode-plugin:0.15.4.develop.+"
 	}
 }
 apply plugin: "org.openbakery.xcode-plugin"
 
 xcodebuild {
 	scheme = 'OBInjectorDemo'
-  target = 'OBInjectorDemo'
+	target = 'OBInjectorDemo'
 
 	destination = ['iPhone 6']
 }

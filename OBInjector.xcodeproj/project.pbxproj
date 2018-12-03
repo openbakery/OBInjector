@@ -15,7 +15,6 @@
 		355B2DAAEE99146CC0EA081F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B29B26E4504C3A405B6A6 /* ViewController.m */; };
 		A7378D0B1CA2DD9C00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
 		A7378D0C1CA2DD9C00D30471 /* OBInjector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A7378D151CA2DDCD00D30471 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7378D141CA2DDCD00D30471 /* Info.plist */; };
 		A7378D161CA2DDE400D30471 /* OBPropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBPropertyInjector.m */; };
 		A7378D171CA2DDE400D30471 /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
 		A7378D181CA2DDEA00D30471 /* OBPropertyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C3557666E045BC7A0AA /* OBPropertyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +23,8 @@
 		A7378D1C1CA2DE8A00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
 		A74531181D64B76700F6A323 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; };
 		A74531191D64B76700F6A323 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; };
+		A75F410621B56D4300866FD4 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A75F410721B56D4300866FD4 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D621C57C4FE009863FE /* AppDelegate.swift */; };
 		A75F7D651C57C4FE009863FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D641C57C4FE009863FE /* ViewController.swift */; };
 		A75F7D6A1C57C4FE009863FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D691C57C4FE009863FE /* Assets.xcassets */; };
@@ -32,8 +33,6 @@
 		A75F7D771C57D09E009863FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D661C57C4FE009863FE /* Main.storyboard */; };
 		A77A65C91B9B36A7004FA11A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77A65CB1B9B36A7004FA11A /* LaunchScreen.xib */; };
 		A77A65CC1B9B36AB004FA11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77A65CE1B9B36AB004FA11A /* Main.storyboard */; };
-		A79CD9AA1C56B6AA00F8AB25 /* OBPropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBPropertyInjector.m */; };
-		A79CD9AB1C56B6AA00F8AB25 /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
 		A7FA3BE11C2407B00011B23B /* OBInjectTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B21983C853153BE08E48F /* OBInjectTestObject.m */; };
 		A7FA3BE21C2407B00011B23B /* OBPropertyInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B24F27D254AF383ECB1BC /* OBPropertyInjectorTest.m */; };
 /* End PBXBuildFile section */
@@ -74,12 +73,14 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A79CD99D1C56B69A00F8AB25 /* CopyFiles */ = {
+		A75F410521B56D3900866FD4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				A75F410621B56D4300866FD4 /* OCHamcrest.framework in CopyFiles */,
+				A75F410721B56D4300866FD4 /* OCMockito.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +124,6 @@
 		A75F7D741C57C8BE009863FE /* MyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		A77A65CF1B9B36B2004FA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A77A65D01B9B36B2004FA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A79CD99F1C56B69A00F8AB25 /* libStatic Library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libStatic Library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0D45D1B9B29020020244B /* OBInjectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBInjectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0D48A1B9B2CA80020244B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,13 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7378D1C1CA2DE8A00D30471 /* OBInjector.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A79CD99C1C56B69A00F8AB25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +272,6 @@
 			children = (
 				A7B0D45D1B9B29020020244B /* OBInjectorDemo.app */,
 				A7B0D48A1B9B2CA80020244B /* Tests.xctest */,
-				A79CD99F1C56B69A00F8AB25 /* libStatic Library.a */,
 				A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */,
 				A7378CF61CA2DD9C00D30471 /* OBInjector.framework */,
 			);
@@ -359,23 +351,6 @@
 			productReference = A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A79CD99E1C56B69A00F8AB25 /* Static Library */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A79CD9A51C56B69A00F8AB25 /* Build configuration list for PBXNativeTarget "Static Library" */;
-			buildPhases = (
-				A79CD99B1C56B69A00F8AB25 /* Sources */,
-				A79CD99C1C56B69A00F8AB25 /* Frameworks */,
-				A79CD99D1C56B69A00F8AB25 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Static Library";
-			productName = OBInjector;
-			productReference = A79CD99F1C56B69A00F8AB25 /* libStatic Library.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		A7B0D45C1B9B29020020244B /* OBInjectorDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7B0D4801B9B29020020244B /* Build configuration list for PBXNativeTarget "OBInjectorDemo" */;
@@ -402,6 +377,7 @@
 				A7B0D4861B9B2CA80020244B /* Sources */,
 				A7B0D4871B9B2CA80020244B /* Frameworks */,
 				A7B0D4881B9B2CA80020244B /* Resources */,
+				A75F410521B56D3900866FD4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -420,16 +396,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Rene Pirringer";
 				TargetAttributes = {
 					A7378CF51CA2DD9C00D30471 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 					A75F7D5F1C57C4FE009863FE = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					A79CD99E1C56B69A00F8AB25 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 					A7B0D45C1B9B29020020244B = {
@@ -456,7 +429,6 @@
 			targets = (
 				A7B0D45C1B9B29020020244B /* OBInjectorDemo */,
 				A7B0D4891B9B2CA80020244B /* Tests */,
-				A79CD99E1C56B69A00F8AB25 /* Static Library */,
 				A75F7D5F1C57C4FE009863FE /* OBInjectorSwiftDemo */,
 				A7378CF51CA2DD9C00D30471 /* OBInjector */,
 			);
@@ -485,7 +457,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7378D151CA2DDCD00D30471 /* Info.plist in Resources */,
 				A77A65CC1B9B36AB004FA11A /* Main.storyboard in Resources */,
 				A77A65C91B9B36A7004FA11A /* LaunchScreen.xib in Resources */,
 				355B2A9AD668EC5593D47334 /* Images.xcassets in Resources */,
@@ -518,15 +489,6 @@
 				A75F7D751C57C8BE009863FE /* MyService.swift in Sources */,
 				A75F7D651C57C4FE009863FE /* ViewController.swift in Sources */,
 				A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A79CD99B1C56B69A00F8AB25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A79CD9AB1C56B6AA00F8AB25 /* OBInjectorController.m in Sources */,
-				A79CD9AA1C56B6AA00F8AB25 /* OBPropertyInjector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +572,9 @@
 		A7378D0E1CA2DD9C00D30471 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -632,7 +596,9 @@
 		A7378D0F1CA2DD9C00D30471 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -678,25 +644,6 @@
 			};
 			name = Release;
 		};
-		A79CD9A61C56B69A00F8AB25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A79CD9A71C56B69A00F8AB25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		A7B0D47E1B9B29020020244B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -705,13 +652,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -750,13 +707,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -775,6 +742,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -857,15 +825,6 @@
 			buildConfigurations = (
 				A75F7D6F1C57C4FE009863FE /* Debug */,
 				A75F7D701C57C4FE009863FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A79CD9A51C56B69A00F8AB25 /* Build configuration list for PBXNativeTarget "Static Library" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A79CD9A61C56B69A00F8AB25 /* Debug */,
-				A79CD9A71C56B69A00F8AB25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
