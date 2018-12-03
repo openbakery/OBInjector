@@ -8,17 +8,14 @@
 //
 
 
+@import XCTest;
+@import OCHamcrest;
+@import OCMockito;
+
 #import "OBPropertyInjector.h"
 #import "OBInjectTestObject.h"
 #import "OBInjectorController.h"
 
-#import <XCTest/XCTest.h>
-
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-
-#define MOCKITO_SHORTHAND
-#import <OCMockito/OCMockito.h>
 
 @interface OBPropertyInjector (Private)
 - (instancetype)initPrivate;
