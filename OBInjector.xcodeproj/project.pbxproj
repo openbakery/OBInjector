@@ -97,8 +97,10 @@
 		355B24F27D254AF383ECB1BC /* OBPropertyInjectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBPropertyInjectorTest.m; sourceTree = "<group>"; };
 		355B25B373CCF61137F1EA27 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		355B25DF4395F7B9A228116C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		355B26955347330C73D12E8C /* build.gradle.kts */ = {isa = PBXFileReference; lastKnownFileType = file.kts; path = build.gradle.kts; sourceTree = "<group>"; };
 		355B270A4182B2F9699807B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		355B27903FFB5C516487D807 /* MyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyService.m; sourceTree = "<group>"; };
+		355B27FB45ECF7A94202CCDB /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		355B28B938FED11426B99427 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		355B29B26E4504C3A405B6A6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		355B2A553A76387C4E40A88B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -264,6 +266,8 @@
 				355B2750D08D5A00D93AD1EF /* Demo */,
 				F52CD380F352B92C21ED7CE4 /* Pods */,
 				0FF4D4C72C2AB77D39EC55DF /* Frameworks */,
+				355B26955347330C73D12E8C /* build.gradle.kts */,
+				355B27FB45ECF7A94202CCDB /* Cartfile */,
 			);
 			sourceTree = "<group>";
 		};

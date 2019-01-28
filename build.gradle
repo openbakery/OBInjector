@@ -1,21 +1,43 @@
 buildscript {
-	repositories {
-		maven {
-			url('http://repo.openbakery.org/')
-		}
-		mavenCentral()
+  repositories {
+    maven {
+      url('http://repo.openbakery.org/')
+    }
+    mavenCentral()
   }
 
-	dependencies {
-			classpath "org.openbakery:xcode-plugin:0.15.4.develop.+"
-	}
+  dependencies {
+    classpath "org.openbakery:xcode-plugin:0.15.4.develop.+"
+  }
 }
+
 apply plugin: "org.openbakery.xcode-plugin"
 
-xcodebuild {
-	scheme = 'OBInjectorDemo'
-	target = 'OBInjectorDemo'
+repositories {
+  mavenCentral()
+}
 
-	destination = ['iPhone 6']
+xcodebuild {
+  scheme = 'OBInjectorDemo'
+  target = 'OBInjectorDemo'
+  configuration = 'Debug'
+  type = 'iOS'
+  bitcode = true
+  destination = ['iPhone 6', 'iPad Air 2' ]
+}
+
+
+task buildFramework(type:org.openbakery.XcodeBuildTask) {
+	scheme = 'OBInjector'
+	target = 'OBInjector'
+	configuration = 'Release'
+	simulator = false
+}
+
+
+
+tasks.create(name: 'archiveFramework', type: Zip) {
+    archiveName = 'build/archive/OBInjector.zip'
+    from 'build/sym/Release-iphoneos'
 }
 
