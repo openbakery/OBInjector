@@ -37,7 +37,7 @@ task buildFramework(type:org.openbakery.XcodeBuildTask) {
 
 
 tasks.create(name: 'archiveFramework', type: Zip) {
-    archiveName = 'build/archive/OBInjector.zip'
+    archiveName = 'OBInjector.zip'
     from 'build/sym/Release-iphoneos'
 }
 
