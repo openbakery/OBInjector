@@ -41,3 +41,4 @@ tasks.create(name: 'archiveFramework', type: Zip) {
     from 'build/sym/Release-iphoneos'
 }
 
+archiveFramework.dependsOn buildFramework
