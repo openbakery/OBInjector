@@ -1,0 +1,5 @@
+OBInjector:
+  project: OBInjector.xcodeproj
+  sdks:
+  - iphonesimulator
+  - iphoneos
