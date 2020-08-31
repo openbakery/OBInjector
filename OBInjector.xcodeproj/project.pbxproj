@@ -15,14 +15,16 @@
 		355B2DAAEE99146CC0EA081F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B29B26E4504C3A405B6A6 /* ViewController.m */; };
 		A7378D0B1CA2DD9C00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
 		A7378D0C1CA2DD9C00D30471 /* OBInjector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A7378D161CA2DDE400D30471 /* OBPropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBPropertyInjector.m */; };
-		A7378D171CA2DDE400D30471 /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
-		A7378D181CA2DDEA00D30471 /* OBPropertyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C3557666E045BC7A0AA /* OBPropertyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7378D191CA2DDEA00D30471 /* OBInjectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C41190344373748B0E4 /* OBInjectorController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7378D1A1CA2DDEA00D30471 /* OBInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B24838A0E93EB51A6FFB5 /* OBInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A7378D1C1CA2DE8A00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
 		A74531181D64B76700F6A323 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; };
 		A74531191D64B76700F6A323 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; };
+		A74E795E24FCF30B00553C5D /* OBInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B24838A0E93EB51A6FFB5 /* OBInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74E795F24FCF30B00553C5D /* OBInjectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C41190344373748B0E4 /* OBInjectorController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74E796024FCF30B00553C5D /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
+		A74E796124FCF30B00553C5D /* OBPropertyInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C3557666E045BC7A0AA /* OBPropertyInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74E796224FCF30B00553C5D /* OBPropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBPropertyInjector.m */; };
+		A74E796324FCF30B00553C5D /* OBRegisteredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B226A808B2EDA545EE89D /* OBRegisteredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A74E796424FCF30B00553C5D /* OBRegisteredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2135276B47238CA0A1A5 /* OBRegisteredProperty.m */; };
 		A75F410621B56D4300866FD4 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A75F410721B56D4300866FD4 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D621C57C4FE009863FE /* AppDelegate.swift */; };
@@ -88,9 +90,11 @@
 
 /* Begin PBXFileReference section */
 		0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		355B2135276B47238CA0A1A5 /* OBRegisteredProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBRegisteredProperty.m; sourceTree = "<group>"; };
 		355B2160F74E9BCD0B9A7536 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		355B21983C853153BE08E48F /* OBInjectTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectTestObject.m; sourceTree = "<group>"; };
 		355B21BE093C2999128E6E52 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		355B226A808B2EDA545EE89D /* OBRegisteredProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBRegisteredProperty.h; sourceTree = "<group>"; };
 		355B2321D3990DBCCF1AB8D9 /* OBInjectTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjectTestObject.h; sourceTree = "<group>"; };
 		355B246B96EBB0BE17E4D589 /* OBInjectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectorController.m; sourceTree = "<group>"; };
 		355B24838A0E93EB51A6FFB5 /* OBInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjector.h; sourceTree = "<group>"; };
@@ -190,11 +194,13 @@
 		355B25B813D37007F9EA707F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				355B24838A0E93EB51A6FFB5 /* OBInjector.h */,
+				355B2C41190344373748B0E4 /* OBInjectorController.h */,
+				355B246B96EBB0BE17E4D589 /* OBInjectorController.m */,
 				355B2C3557666E045BC7A0AA /* OBPropertyInjector.h */,
 				355B2AFA1245E477DE942590 /* OBPropertyInjector.m */,
-				355B246B96EBB0BE17E4D589 /* OBInjectorController.m */,
-				355B2C41190344373748B0E4 /* OBInjectorController.h */,
-				355B24838A0E93EB51A6FFB5 /* OBInjector.h */,
+				355B226A808B2EDA545EE89D /* OBRegisteredProperty.h */,
+				355B2135276B47238CA0A1A5 /* OBRegisteredProperty.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -310,9 +316,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7378D1A1CA2DDEA00D30471 /* OBInjector.h in Headers */,
-				A7378D181CA2DDEA00D30471 /* OBPropertyInjector.h in Headers */,
-				A7378D191CA2DDEA00D30471 /* OBInjectorController.h in Headers */,
+				A74E796324FCF30B00553C5D /* OBRegisteredProperty.h in Headers */,
+				A74E796124FCF30B00553C5D /* OBPropertyInjector.h in Headers */,
+				A74E795E24FCF30B00553C5D /* OBInjector.h in Headers */,
+				A74E795F24FCF30B00553C5D /* OBInjectorController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +427,7 @@
 			};
 			buildConfigurationList = A7B0D4581B9B29020020244B /* Build configuration list for PBXProject "OBInjector" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -481,8 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7378D171CA2DDE400D30471 /* OBInjectorController.m in Sources */,
-				A7378D161CA2DDE400D30471 /* OBPropertyInjector.m in Sources */,
+				A74E796424FCF30B00553C5D /* OBRegisteredProperty.m in Sources */,
+				A74E796024FCF30B00553C5D /* OBInjectorController.m in Sources */,
+				A74E796224FCF30B00553C5D /* OBPropertyInjector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

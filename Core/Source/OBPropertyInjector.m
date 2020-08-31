@@ -9,77 +9,20 @@
 #import <objc/runtime.h>
 #import "OBPropertyInjector.h"
 
-@interface OBRegisteredProperty : NSObject
 
 
-@property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) Class instanceClass;
-
-- (instancetype)initWithName:(NSString *)name block:(OBInjectorCreateInstanceBlock)block;
-- (instancetype)initWithName:(NSString *)name object:(NSObject *)object;
-
-- (NSObject *)instance;
-
-
+@interface OBPropertyInjector()
+@property (nonatomic, strong) NSMutableArray *registeredProperties;
 @end
 
-@implementation OBRegisteredProperty {
-	NSString *_name;
-	OBInjectorCreateInstanceBlock _block;
-	NSObject *_instance;
-	Class _instanceClass;
-	
-}
-
-- (instancetype)initWithName:(NSString *)name block:(OBInjectorCreateInstanceBlock)block {
-	self = [super init];
-	if (self) {
-		_name = name;
-		_block = [block copy];
-		_instanceClass = [block() class];
-	}
-	return self;
-}
-
-- (instancetype)initWithName:(NSString *)name object:(NSObject *)object {
-	self = [super init];
-	if (self) {
-		_name = name;
-		_instance = object;
-		_instanceClass = [object class];
-	}
-	return self;
-}
-
-- (NSString *)name {
-	return _name;
-}
-
-- (Class)instanceClass {
-	return _instanceClass;
-}
-
-- (NSObject *)instance {
-	if (_block) {
-		return _block();
-	}
-	return _instance;
-}
-
-
-@end
-
-
-@implementation OBPropertyInjector
-{
-	NSMutableArray *_registeredProperties;
+@implementation OBPropertyInjector {
 }
 
 
 - (id)init {
 	self = [super init];
 	if (self) {
-		_registeredProperties = [[NSMutableArray alloc] init];
+		self.registeredProperties = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
@@ -124,7 +67,7 @@
 - (void)injectDependenciesTo:(NSObject *)injectTo
 {
 	BOOL didInjectDependencies = NO;
-	for (OBRegisteredProperty *registeredProperty in _registeredProperties) {
+	for (OBRegisteredProperty *registeredProperty in self.registeredProperties) {
 		if ([self injectPropertyTo:injectTo registredProperty:registeredProperty]) {
 			didInjectDependencies = YES;
 		}
@@ -144,22 +87,25 @@
 }
 
 
-- (void)registerProperty:(NSString *)property withInstance:(id <NSObject>)instance
-{
-	OBRegisteredProperty *registredProperty = [[OBRegisteredProperty alloc] initWithName:property object:instance];
-	[_registeredProperties addObject:registredProperty];
+- (void)registerProperty:(NSString *)property withInstance:(id <NSObject>)instance {
+	if ([self propertyForName:property]) {
+		return;
+	}
+
+	OBRegisteredProperty *registeredProperty = [[OBRegisteredProperty alloc] initWithName:property object:instance];
+	[self.registeredProperties addObject:registeredProperty];
 }
 
 
 - (void)registerProperty:(NSString *)property withBlock:(OBInjectorCreateInstanceBlock)block {
 	NSAssert(block, @"Given block is nil");
-	OBRegisteredProperty *registredProperty = [[OBRegisteredProperty alloc] initWithName:property block:block];
-	[_registeredProperties addObject:registredProperty];
+	OBRegisteredProperty *registeredProperty = [[OBRegisteredProperty alloc] initWithName:property block:block];
+	[self.registeredProperties addObject:registeredProperty];
 	
 }
 
 - (id)instanceForClass:(Class)clazz {
-	for (OBRegisteredProperty *registeredProperty  in _registeredProperties) {
+	for (OBRegisteredProperty *registeredProperty  in self.registeredProperties) {
 		if ([registeredProperty.instanceClass isSubclassOfClass:clazz]) {
 			return registeredProperty.instance;
 		}
@@ -168,7 +114,7 @@
 }
 
 - (OBRegisteredProperty *)propertyForName:(NSString *)propertyName {
-	for (OBRegisteredProperty *registeredProperty in _registeredProperties) {
+	for (OBRegisteredProperty *registeredProperty in self.registeredProperties) {
 		if ([registeredProperty.name isEqualToString:propertyName]) {
 			return registeredProperty;
 		}
@@ -183,7 +129,7 @@
 - (void)deleteProperty:(NSString *)propertyName {
 	OBRegisteredProperty *registeredProperty = [self propertyForName:propertyName];
 	if (registeredProperty) {
-		[_registeredProperties removeObject:registeredProperty];
+		[self.registeredProperties removeObject:registeredProperty];
 	}
 }
 

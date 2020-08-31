@@ -5,9 +5,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OBRegisteredProperty.h"
 
-
-typedef id<NSObject> (^OBInjectorCreateInstanceBlock)(void);
 
 /**
  * The OBInjectorDelegate protocol can be implemented when a instance need to know when the dependency injection took place

@@ -17,8 +17,10 @@
 #import "OBInjectorController.h"
 
 
+
 @interface OBPropertyInjector (Private)
 - (instancetype)initPrivate;
+@property (nonatomic, strong) NSMutableArray *registeredProperties;
 @end
 
 @interface OBPropertyInjectorTest : XCTestCase
@@ -91,6 +93,15 @@
 	assertThat(testObject.injectTest, is(equalTo(@"testString")));
 }
 
+
+- (void)testRegisterTwice_add_propery_only_once {
+	[injector registerProperty:@"injectTest" withInstance:@"testString"];
+	[injector registerProperty:@"injectTest" withInstance:@"secondString"];
+	[injector injectDependenciesTo:testObject];
+
+	assertThat(injector.registeredProperties, hasCountOf(1));
+}
+
 - (void)testInstanceForProperty {
 	NSString *instance = @"testString";
 	[injector registerProperty:@"injectTest" withInstance:instance];
@@ -107,6 +118,7 @@
 
 	NSString *instanceForProperty = [injector instanceForProperty:@"injectTest"];
 	assertThat(instanceForProperty, is(nilValue()));
+	assertThat(injector.registeredProperties, hasCountOf(0));
 
 }
 
