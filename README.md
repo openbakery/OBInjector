@@ -17,7 +17,7 @@ Add the following line to you Podspec:
 
 
 ```
-pod 'OBInjector', '~> 1.4.1'
+pod 'OBInjector', '~> 1.6'
 ```
 
 Use the following import in your code:
