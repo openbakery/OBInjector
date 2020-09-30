@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OBRegisteredProperty.h"
+#import <OBInjector/OBRegisteredProperty.h>
 
 
 /**
