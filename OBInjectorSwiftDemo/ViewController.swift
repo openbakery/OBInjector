@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
 	var myService: MyService!
-	var dateFormatter: NSDateFormatter!
+    var dateFormatter: DateFormatter!
 	var currentDate: NSDate!
 	
 	@IBOutlet var launchDateLabel: UILabel!
@@ -22,19 +22,18 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		
-		NSLog("MyService launchDate: \(myService?.launchDate)")
+        NSLog("MyService launchDate: \(String(describing: myService?.launchDate))")
 		
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
-	override func viewWillAppear(animated:Bool) {
-		self.launchDateLabel.text = "\(dateFormatter.stringFromDate((myService.launchDate)))"
-		self.currentDateLabel.text = "\(dateFormatter.stringFromDate(currentDate))"
+    override func viewWillAppear(_ animated:Bool) {
+        self.launchDateLabel.text = "\(dateFormatter.string(from: myService.launchDate as Date)))"
+		self.currentDateLabel.text = "\(dateFormatter.string(from: currentDate as Date)))"
 	}
 	
-	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		OBInjectorController.injectDependenciesTo(segue.destinationViewController)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        OBInjectorController.injectDependencies(to: segue.destination)
 	}
 
 }

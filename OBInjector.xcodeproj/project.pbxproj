@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		355B2156F97B6DB54AF4CE9A /* MyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B27903FFB5C516487D807 /* MyService.m */; };
-		355B28EA4CDFAE088BB12284 /* OBInjectorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2D1698713C74862A597D /* OBInjectorControllerTest.m */; };
 		355B2A9AD668EC5593D47334 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355B25DF4395F7B9A228116C /* Images.xcassets */; };
 		355B2CFD83860C25F53B0065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B25B373CCF61137F1EA27 /* main.m */; };
 		355B2D9E4757B813E5C46ABC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2A553A76387C4E40A88B /* AppDelegate.m */; };
@@ -16,8 +15,11 @@
 		A7378D0B1CA2DD9C00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
 		A7378D0C1CA2DD9C00D30471 /* OBInjector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7378D1C1CA2DE8A00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
-		A74531181D64B76700F6A323 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; };
-		A74531191D64B76700F6A323 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; };
+		A73A20EE2583A1140063C2D2 /* OCHamcrest.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */; };
+		A73A20EF2583A1140063C2D2 /* OCMockito.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A20DD25839F410063C2D2 /* OCMockito.xcframework */; };
+		A73A21242583C4860063C2D2 /* OBInjectorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2D1698713C74862A597D /* OBInjectorControllerTest.m */; };
+		A73A21372583C82D0063C2D2 /* OCHamcrest.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A73A21382583C82D0063C2D2 /* OCMockito.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A73A20DD25839F410063C2D2 /* OCMockito.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A74E795E24FCF30B00553C5D /* OBInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B24838A0E93EB51A6FFB5 /* OBInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74E795F24FCF30B00553C5D /* OBInjectorController.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B2C41190344373748B0E4 /* OBInjectorController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74E796024FCF30B00553C5D /* OBInjectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B246B96EBB0BE17E4D589 /* OBInjectorController.m */; };
@@ -25,8 +27,6 @@
 		A74E796224FCF30B00553C5D /* OBPropertyInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2AFA1245E477DE942590 /* OBPropertyInjector.m */; };
 		A74E796324FCF30B00553C5D /* OBRegisteredProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 355B226A808B2EDA545EE89D /* OBRegisteredProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A74E796424FCF30B00553C5D /* OBRegisteredProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B2135276B47238CA0A1A5 /* OBRegisteredProperty.m */; };
-		A75F410621B56D4300866FD4 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74531161D64B76700F6A323 /* OCHamcrest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A75F410721B56D4300866FD4 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A74531171D64B76700F6A323 /* OCMockito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A75F7D631C57C4FE009863FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D621C57C4FE009863FE /* AppDelegate.swift */; };
 		A75F7D651C57C4FE009863FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75F7D641C57C4FE009863FE /* ViewController.swift */; };
 		A75F7D6A1C57C4FE009863FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D691C57C4FE009863FE /* Assets.xcassets */; };
@@ -81,15 +81,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A75F410621B56D4300866FD4 /* OCHamcrest.framework in CopyFiles */,
-				A75F410721B56D4300866FD4 /* OCMockito.framework in CopyFiles */,
+				A73A21372583C82D0063C2D2 /* OCHamcrest.xcframework in CopyFiles */,
+				A73A21382583C82D0063C2D2 /* OCMockito.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		355B2135276B47238CA0A1A5 /* OBRegisteredProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBRegisteredProperty.m; sourceTree = "<group>"; };
 		355B2160F74E9BCD0B9A7536 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		355B21983C853153BE08E48F /* OBInjectTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectTestObject.m; sourceTree = "<group>"; };
@@ -112,12 +111,11 @@
 		355B2C3557666E045BC7A0AA /* OBPropertyInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBPropertyInjector.h; sourceTree = "<group>"; };
 		355B2C41190344373748B0E4 /* OBInjectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBInjectorController.h; sourceTree = "<group>"; };
 		355B2D1698713C74862A597D /* OBInjectorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBInjectorControllerTest.m; sourceTree = "<group>"; };
-		4823AA3E30B98AC708894D53 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7378CF61CA2DD9C00D30471 /* OBInjector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OBInjector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7378D141CA2DDCD00D30471 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7378D1B1CA2DE3700D30471 /* OBInjector.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = OBInjector.modulemap; sourceTree = "<group>"; };
-		A74531161D64B76700F6A323 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Carthage/Build/iOS/OCHamcrest.framework; sourceTree = "<group>"; };
-		A74531171D64B76700F6A323 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Carthage/Build/iOS/OCMockito.framework; sourceTree = "<group>"; };
+		A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OCHamcrest.xcframework; path = Carthage/Build/OCHamcrest.xcframework; sourceTree = "<group>"; };
+		A73A20DD25839F410063C2D2 /* OCMockito.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OCMockito.xcframework; path = Carthage/Build/OCMockito.xcframework; sourceTree = "<group>"; };
 		A75F7D601C57C4FE009863FE /* OBInjectorSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBInjectorSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F7D621C57C4FE009863FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75F7D641C57C4FE009863FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		A77A65D01B9B36B2004FA11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7B0D45D1B9B29020020244B /* OBInjectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBInjectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B0D48A1B9B2CA80020244B /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +159,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74531181D64B76700F6A323 /* OCHamcrest.framework in Frameworks */,
-				A74531191D64B76700F6A323 /* OCMockito.framework in Frameworks */,
+				A73A20EE2583A1140063C2D2 /* OCHamcrest.xcframework in Frameworks */,
+				A73A20EF2583A1140063C2D2 /* OCMockito.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,9 +170,8 @@
 		0FF4D4C72C2AB77D39EC55DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A74531161D64B76700F6A323 /* OCHamcrest.framework */,
-				A74531171D64B76700F6A323 /* OCMockito.framework */,
-				4823AA3E30B98AC708894D53 /* libPods-Tests.a */,
+				A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */,
+				A73A20DD25839F410063C2D2 /* OCMockito.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,7 +265,6 @@
 				A7B0D45E1B9B29020020244B /* Products */,
 				355B21AABEFFF32C5AE472DF /* Core */,
 				355B2750D08D5A00D93AD1EF /* Demo */,
-				F52CD380F352B92C21ED7CE4 /* Pods */,
 				0FF4D4C72C2AB77D39EC55DF /* Frameworks */,
 				355B27FB45ECF7A94202CCDB /* Cartfile */,
 			);
@@ -296,15 +291,6 @@
 				355B2321D3990DBCCF1AB8D9 /* OBInjectTestObject.h */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		F52CD380F352B92C21ED7CE4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CE56A697D9975D57FBDD14E0 /* Pods-Tests.debug.xcconfig */,
-				0F7D6CBFE992BE9A0AC2ABB0 /* Pods-Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,8 +504,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FA3BE11C2407B00011B23B /* OBInjectTestObject.m in Sources */,
+				A73A21242583C4860063C2D2 /* OBInjectorControllerTest.m in Sources */,
 				A7FA3BE21C2407B00011B23B /* OBPropertyInjectorTest.m in Sources */,
-				355B28EA4CDFAE088BB12284 /* OBInjectorControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,8 +579,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elo.OBInjector;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openbakery..OBInjector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -615,8 +600,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elo.OBInjector;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openbakery..OBInjector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -630,11 +614,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = OBInjectorSwiftDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elo.OBInjectorSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openbakery.OBInjectorSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OBInjectorSwiftDemo/OBInjector-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -643,17 +627,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OBInjectorSwiftDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.elo.OBInjectorSwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openbakery.OBInjectorSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "OBInjectorSwiftDemo/OBInjector-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		A7B0D47E1B9B29020020244B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -709,7 +692,6 @@
 		A7B0D47F1B9B29020020244B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -761,7 +743,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Resource/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -772,7 +757,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Demo/Resource/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -782,16 +770,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Resource/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -803,12 +793,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Tests/Resource/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/Frameworks",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.openbakery.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

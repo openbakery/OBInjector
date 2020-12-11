@@ -7,36 +7,27 @@ buildscript {
   }
 
   dependencies {
-    classpath "org.openbakery:xcode-plugin:0.19.2.develop.+"
+    classpath "org.openbakery:xcode-plugin:0.21.0.develop.+"
   }
 }
 
 apply plugin: "org.openbakery.xcode-plugin"
 
 project.ext.version = '1.5.0'
+carthage {
+  xcframework = true
+}
 
 repositories {
   mavenCentral()
 }
 
 xcodebuild {
-  scheme = 'OBInjectorDemo'
-  target = 'OBInjectorDemo'
+  scheme = 'OBInjector'
+  target = 'OBInjector'
   configuration = 'Debug'
   type = 'iOS'
   bitcode = true
-  destination = ['iPhone 8' ]
+  destination = ['iPhone 12' ]
 }
 
-task carthageArchive(type:Exec) {
-    workingDir '.'
-    commandLine 'carthage', 'build', '--archive', '--platform', 'iOS'
-}
-
-task binaryRelease(type: Copy) {
-    from file("OBInjector.framework.zip")
-    into file("$buildDir")
-
-    rename '(.+).framework.zip', '$1-' + project.ext.version + '.zip'
-}
-binaryRelease.dependsOn carthageArchive
