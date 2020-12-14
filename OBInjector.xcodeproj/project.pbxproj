@@ -14,8 +14,8 @@
 		355B2DAAEE99146CC0EA081F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B29B26E4504C3A405B6A6 /* ViewController.m */; };
 		A718829825875224005FF660 /* OCHamcrest.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */; };
 		A718829925875224005FF660 /* OCMockito.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A20DD25839F410063C2D2 /* OCMockito.xcframework */; };
-		A71882BC258758A6005FF660 /* OCHamcrest.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A71882BD258758A6005FF660 /* OCMockito.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A73A20DD25839F410063C2D2 /* OCMockito.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A71882E7258773F1005FF660 /* OCHamcrest.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A73A20DC25839F410063C2D2 /* OCHamcrest.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A71882E8258773F1005FF660 /* OCMockito.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A73A20DD25839F410063C2D2 /* OCMockito.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7378D0B1CA2DD9C00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
 		A7378D0C1CA2DD9C00D30471 /* OBInjector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7378D1C1CA2DE8A00D30471 /* OBInjector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7378CF61CA2DD9C00D30471 /* OBInjector.framework */; };
@@ -64,6 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A71882E6258773EB005FF660 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A71882E7258773F1005FF660 /* OCHamcrest.xcframework in CopyFiles */,
+				A71882E8258773F1005FF660 /* OCMockito.xcframework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A7378D101CA2DD9C00D30471 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,17 +84,6 @@
 				A7378D0C1CA2DD9C00D30471 /* OBInjector.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A75F410521B56D3900866FD4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A71882BC258758A6005FF660 /* OCHamcrest.xcframework in CopyFiles */,
-				A71882BD258758A6005FF660 /* OCMockito.xcframework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -372,7 +372,7 @@
 				A7B0D4861B9B2CA80020244B /* Sources */,
 				A7B0D4871B9B2CA80020244B /* Frameworks */,
 				A7B0D4881B9B2CA80020244B /* Resources */,
-				A75F410521B56D3900866FD4 /* CopyFiles */,
+				A71882E6258773EB005FF660 /* CopyFiles */,
 			);
 			buildRules = (
 			);
