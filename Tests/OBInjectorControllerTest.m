@@ -7,8 +7,8 @@
 #import "OBInjectTestObject.h"
 
 @import XCTest;
-@import OCHamcrest;
 @import OCMockito;
+@import OCHamcrest;
 
 @interface OBInjectorControllerTest : XCTestCase
 @end
