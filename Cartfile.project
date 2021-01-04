@@ -1,5 +1,2 @@
-OBInjector:
-  project: OBInjector.xcodeproj
-  sdks:
-  - iphonesimulator
-  - iphoneos
+github "jonreid/OCMockito"
+github "hamcrest/OCHamcrest" ~> 7.0
