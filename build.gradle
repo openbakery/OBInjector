@@ -23,7 +23,6 @@ repositories {
 }
 
 xcodebuild {
-  version = "12.2"
   scheme = 'OBInjector'
   target = 'OBInjector'
   configuration = 'Debug'

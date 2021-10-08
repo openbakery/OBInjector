@@ -1,2 +1,2 @@
-github "hamcrest/OCHamcrest" "v7.1.2"
-github "renep/OCMockito" "6bef1f0b7e60550069d6754d978e1e15b32ea893"
+github "hamcrest/OCHamcrest" "v8.0.0"
+github "renep/OCMockito" "8a070d378991b39b57989cc0e2bcf773a0babfa0"

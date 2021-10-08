@@ -32,6 +32,11 @@
 
 
 /**
+ * We only have a default constructor
+ */
+- (instancetype)init;
+
+/**
  * Injects the instances to the registered properties of the given object.
  * Note that only values are injected where the property is nil.
  * @param injectTo Object where the dependencies should be injected
