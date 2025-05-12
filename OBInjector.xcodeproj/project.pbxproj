@@ -31,7 +31,6 @@
 		A75F7D771C57D09E009863FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75F7D661C57C4FE009863FE /* Main.storyboard */; };
 		A77A65C91B9B36A7004FA11A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A77A65CB1B9B36A7004FA11A /* LaunchScreen.xib */; };
 		A77A65CC1B9B36AB004FA11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77A65CE1B9B36AB004FA11A /* Main.storyboard */; };
-		A7B34FF32ABC3FEC002319C1 /* OCMockito in Frameworks */ = {isa = PBXBuildFile; productRef = A7B34FF22ABC3FEC002319C1 /* OCMockito */; };
 		A7FA3BE11C2407B00011B23B /* OBInjectTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B21983C853153BE08E48F /* OBInjectTestObject.m */; };
 		A7FA3BE21C2407B00011B23B /* OBPropertyInjectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 355B24F27D254AF383ECB1BC /* OBPropertyInjectorTest.m */; };
 /* End PBXBuildFile section */
@@ -151,7 +150,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B34FF32ABC3FEC002319C1 /* OCMockito in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +367,6 @@
 			);
 			name = Tests;
 			packageProductDependencies = (
-				A7B34FF22ABC3FEC002319C1 /* OCMockito */,
 			);
 			productName = Tests;
 			productReference = A7B0D48A1B9B2CA80020244B /* Tests.xctest */;
@@ -411,7 +408,6 @@
 			);
 			mainGroup = A7B0D4541B9B29020020244B;
 			packageReferences = (
-				A7B34FF02ABC3FCB002319C1 /* XCRemoteSwiftPackageReference "OCMockito" */,
 			);
 			productRefGroup = A7B0D45E1B9B29020020244B /* Products */;
 			projectDirPath = "";
@@ -868,25 +864,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A7B34FF02ABC3FCB002319C1 /* XCRemoteSwiftPackageReference "OCMockito" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jonreid/OCMockito";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A7B34FF22ABC3FEC002319C1 /* OCMockito */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A7B34FF02ABC3FCB002319C1 /* XCRemoteSwiftPackageReference "OCMockito" */;
-			productName = OCMockito;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A7B0D4551B9B29020020244B /* Project object */;
 }

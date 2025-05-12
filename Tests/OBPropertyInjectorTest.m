@@ -9,8 +9,6 @@
 
 
 @import XCTest;
-@import OCHamcrest;
-@import OCMockito;
 
 #import "OBPropertyInjector.h"
 #import "OBInjectTestObject.h"
@@ -43,24 +41,24 @@
 - (void)testInjector {
 	[injector registerProperty:@"injectTest" withInstance:@"testString"];
 	[injector injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(equalTo(@"testString")));
+	XCTAssertEqual(testObject.injectTest, @"testString");
 }
 
 - (void)testInjectorWithWrongClass {
 	[injector registerProperty:@"injectTest" withInstance:[NSArray array]];
 	[injector injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(nilValue()));
+	XCTAssertNil(testObject.injectTest);
 }
 
 - (void)testNothingInjected {
 	[injector registerProperty:@"injectTest" withInstance:@"testString"];
-	assertThat(testObject.injectTest, is(nilValue()));
+	XCTAssertNil(testObject.injectTest);
 }
 
 - (void)testInjectorPropertyMissing {
 	[injector registerProperty:@"foobar" withInstance:@"testString"];
 	[injector injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(nilValue()));
+	XCTAssertNil(testObject.injectTest);
 }
 
 - (void)testInjectOnlyNil {
@@ -69,13 +67,13 @@
 	[injector registerProperty:@"injectTest" withInstance:@"testString"];
 	[injector injectDependenciesTo:testObject];
 
-	assertThat(testObject.injectTest, is(@"Test"));
+	XCTAssertEqual(testObject.injectTest, @"Test");
 }
 
 - (void)testDidInjectDependencies {
 	[injector registerProperty:@"injectTest" withInstance:@"testString"];
 	[injector injectDependenciesTo:testObject];
-	assertThatBool(testObject.didInject, is(@YES));
+	XCTAssertTrue(testObject.didInject);
 }
 
 
@@ -83,14 +81,14 @@
 	testObject.injectTest = @"Test";
 	[injector registerProperty:@"injectTest" withInstance:@"testString"];
 	[injector injectDependenciesTo:testObject];
-	assertThatBool(testObject.didInject, is(@NO));
+	XCTAssertFalse(testObject.didInject);
 }
 
 - (void)testRegisterTwice {
 	[injector registerProperty:@"injectTest" withInstance:@"testString"];
 	[injector registerProperty:@"injectTest" withInstance:@"secondString"];
 	[injector injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(equalTo(@"testString")));
+	XCTAssertEqual(testObject.injectTest, @"testString");
 }
 
 
@@ -99,7 +97,7 @@
 	[injector registerProperty:@"injectTest" withInstance:@"secondString"];
 	[injector injectDependenciesTo:testObject];
 
-	assertThat(injector.registeredProperties, hasCountOf(1));
+	XCTAssertEqual(injector.registeredProperties.count, 1);
 }
 
 - (void)testInstanceForProperty {
@@ -107,7 +105,7 @@
 	[injector registerProperty:@"injectTest" withInstance:instance];
 
 	NSString *instanceForProperty = [injector instanceForProperty:@"injectTest"];
-	assertThat(instanceForProperty, is(instance));
+	XCTAssertEqual(instanceForProperty, instance);
 }
 
 
@@ -117,8 +115,8 @@
 
 
 	NSString *instanceForProperty = [injector instanceForProperty:@"injectTest"];
-	assertThat(instanceForProperty, is(nilValue()));
-	assertThat(injector.registeredProperties, hasCountOf(0));
+	XCTAssertNil(instanceForProperty);
+	XCTAssertEqual(injector.registeredProperties.count, 0);
 
 }
 

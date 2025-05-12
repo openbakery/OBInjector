@@ -7,8 +7,6 @@
 #import "OBInjectTestObject.h"
 
 @import XCTest;
-@import OCHamcrest;
-@import OCMockito;
 
 @interface OBInjectorControllerTest : XCTestCase
 @end
@@ -26,7 +24,7 @@
 
 - (void)testUninitializedController {
 	[OBInjectorController injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(nilValue()));
+	XCTAssertNil(testObject.injectTest);
 }
 
 
@@ -35,7 +33,7 @@
 			[injector registerProperty:@"injectTest" withInstance:@"testString"];
 	}];
 	[OBInjectorController injectDependenciesTo:testObject];
-	assertThat(testObject.injectTest, is(equalTo(@"testString")));
+	XCTAssertEqual(testObject.injectTest, @"testString");
 }
 
 
@@ -50,6 +48,6 @@
 	[OBInjectorController configureInjector:^(OBPropertyInjector *injector) {
 			count++;
 	}];
-	assertThatInteger(count, is(@1));
+	XCTAssertEqual(count, 1);
 }
 @end
